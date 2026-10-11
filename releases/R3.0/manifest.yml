@@ -1,0 +1,115 @@
+release: R3.0
+base:
+  name: CraftBukkit 1.2.5-R5.0
+  sha256: 3db139dbfec28742da3c70b07bbb93d48d277d0791f0cfa31f8fba8d6bc422f1
+units:
+  - id: resources
+    cw: resources.cw
+    category: core
+    locked: true
+    depends: []
+  - id: ai
+    cw: ai.cw
+    category: quick
+    locked: false
+    depends: [config, core, fixes, light, mobs, redstone, timings]
+  - id: antixray
+    cw: antixray.cw
+    category: quick
+    locked: false
+    depends: [config, core]
+  - id: branding
+    cw: branding.cw
+    category: core
+    locked: false
+    depends: [commands, core, netty, nolagg, tickloop, timings]
+  - id: chat
+    cw: chat.cw
+    category: quick
+    locked: false
+    depends: [commands, config, core, netty]
+  - id: chunkgc
+    cw: chunkgc.cw
+    category: quick
+    locked: false
+    depends: [config, core]
+  - id: commands
+    cw: commands.cw
+    category: quick
+    locked: false
+    depends: [branding, chat, config, core, netty, scheduler, timings, worldgen]
+  - id: config
+    cw: config.cw
+    category: core
+    locked: true
+    depends: [ai, antixray, chunkgc, commands, core, fixes, messages, netty, scheduler, timings, worldgen]
+  - id: core
+    cw: core.cw
+    category: core
+    locked: true
+    depends: [ai, antixray, branding, chat, chunkgc, commands, config, fixes, light, messages, mobs, mobspawn, netty, nolagg, redstone, scheduler, tickloop, timings, worldgen]
+  - id: fixes
+    cw: fixes.cw
+    category: quick
+    locked: false
+    depends: [ai, config, core]
+  - id: light
+    cw: light.cw
+    category: quick
+    locked: false
+    depends: [ai, config, core, mobs, redstone, timings]
+  - id: merge
+    cw: merge.cw
+    category: quick
+    locked: false
+    depends: [config, mobs]
+  - id: messages
+    cw: messages.cw
+    category: quick
+    locked: false
+    depends: [config, core, netty]
+  - id: mobs
+    cw: mobs.cw
+    category: quick
+    locked: false
+    depends: [ai, config, core, light, merge, mobspawn, redstone, scheduler, timings]
+  - id: mobspawn
+    cw: mobspawn.cw
+    category: quick
+    locked: false
+    depends: [config, core, mobs]
+  - id: netty
+    cw: netty.cw
+    category: critical
+    locked: true
+    depends: [branding, chat, commands, config, core, messages, nolagg, tickloop, timings]
+  - id: nolagg
+    cw: nolagg.cw
+    category: quick
+    locked: false
+    depends: [branding, config, core, netty, scheduler, tickloop, timings]
+  - id: redstone
+    cw: redstone.cw
+    category: quick
+    locked: false
+    depends: [ai, config, core, light, mobs, timings]
+  - id: scheduler
+    cw: scheduler.cw
+    category: quick
+    locked: false
+    depends: [commands, config, core, timings, worldgen]
+  - id: tickloop
+    cw: tickloop.cw
+    category: quick
+    locked: false
+    depends: [branding, config, core, netty, nolagg, scheduler, timings]
+  - id: timings
+    cw: timings.cw
+    category: quick
+    locked: false
+    depends: [ai, branding, commands, config, core, light, mobs, netty, nolagg, redstone, scheduler, tickloop, worldgen]
+  - id: worldgen
+    cw: worldgen.cw
+    category: quick
+    locked: false
+    depends: [commands, config, core, scheduler, timings]

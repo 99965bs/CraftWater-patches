@@ -1,0 +1,19 @@
+format: craftwater-patchpack
+format-version: 1
+base:
+  name: CraftBukkit 1.2.5-R5.0
+  url: https://drive.usercontent.google.com/u/0/uc?id=1HCQlWMPhEsQ0Uo6PZY_HloWtx2OM_9C_&export=download
+  sha256: 3db139dbfec28742da3c70b07bbb93d48d277d0791f0cfa31f8fba8d6bc422f1
+releases:
+  - id: R1.0
+    manifest: releases/R1.0/manifest.yml
+  - id: R2.0
+    manifest: releases/R2.0/manifest.yml
+  - id: R2.1
+    manifest: releases/R2.1/manifest.yml
+  - id: R2.2
+    manifest: releases/R2.2/manifest.yml
+  - id: R3.0
+    manifest: releases/R3.0/manifest.yml
+  - id: R4.0
+    manifest: releases/R4.0/manifest.yml

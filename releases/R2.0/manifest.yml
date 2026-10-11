@@ -1,0 +1,90 @@
+release: R2.0
+base:
+  name: CraftBukkit 1.2.5-R5.0
+  sha256: 3db139dbfec28742da3c70b07bbb93d48d277d0791f0cfa31f8fba8d6bc422f1
+units:
+  - id: resources
+    cw: resources.cw
+    category: core
+    locked: true
+    depends: []
+  - id: ai
+    cw: ai.cw
+    category: quick
+    locked: false
+    depends: [config, core, mobs]
+  - id: antixray
+    cw: antixray.cw
+    category: quick
+    locked: false
+    depends: [config, core]
+  - id: branding
+    cw: branding.cw
+    category: core
+    locked: false
+    depends: [commands, config, core, scheduler, worldgen]
+  - id: chunkgc
+    cw: chunkgc.cw
+    category: quick
+    locked: false
+    depends: [config, core]
+  - id: commands
+    cw: commands.cw
+    category: quick
+    locked: false
+    depends: [branding, config, core, scheduler, worldgen]
+  - id: config
+    cw: config.cw
+    category: core
+    locked: true
+    depends: [antixray, branding, chunkgc, commands, core, fixes, light, messages, netty, scheduler, worldgen]
+  - id: core
+    cw: core.cw
+    category: core
+    locked: true
+    depends: [ai, antixray, branding, chunkgc, commands, config, fixes, light, messages, mobs, netty, scheduler, tickloop, worldgen]
+  - id: fixes
+    cw: fixes.cw
+    category: quick
+    locked: false
+    depends: [config, core]
+  - id: light
+    cw: light.cw
+    category: quick
+    locked: false
+    depends: [config, core]
+  - id: merge
+    cw: merge.cw
+    category: quick
+    locked: false
+    depends: [config, mobs]
+  - id: messages
+    cw: messages.cw
+    category: quick
+    locked: false
+    depends: [config, core, netty]
+  - id: mobs
+    cw: mobs.cw
+    category: quick
+    locked: false
+    depends: [ai, config, core, merge, scheduler]
+  - id: netty
+    cw: netty.cw
+    category: critical
+    locked: true
+    depends: [branding, config, core, messages, scheduler, tickloop]
+  - id: scheduler
+    cw: scheduler.cw
+    category: quick
+    locked: false
+    depends: [branding, commands, config, core, worldgen]
+  - id: tickloop
+    cw: tickloop.cw
+    category: quick
+    locked: false
+    depends: [config, core, netty, scheduler]
+  - id: worldgen
+    cw: worldgen.cw
+    category: quick
+    locked: false
+    depends: [branding, commands, config, core, scheduler]
